@@ -2,9 +2,9 @@
 
 > this is a Treatment register project
 
-##小组成员：
+## 小组成员：
 
-###尹鸿韬 李钊 郑泽凯
+### 尹鸿韬 李钊 郑泽凯
 
 ``` bash
 # install dependencies
