@@ -3,9 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import axios from 'axios'
+import  VueQuillEditor from 'vue-quill-editor'
+import ElementUI from 'element-ui';
 Vue.config.productionTip = false
-
+Vue.use(ElementUI);
+Vue.use(axios)
+Vue.use(VueQuillEditor)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -13,3 +17,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+

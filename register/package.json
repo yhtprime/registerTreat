@@ -5,13 +5,17 @@
   "author": "814850963@qq.com",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "swuxub": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run swuxub",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.8.2",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

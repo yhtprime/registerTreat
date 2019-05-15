@@ -2,6 +2,8 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <router-link to="/mobile">跳转到mobile</router-link>
+    <router-link to="/auto">跳转到auto</router-link>
   </div>
 </template>
 
