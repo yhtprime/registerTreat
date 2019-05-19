@@ -1,5 +1,7 @@
 <template>
-    <h1>这个是汽车信息</h1>
+  <div id="footer">
+    <h1>这是footer</h1>
+  </div>
 </template>
 <script>
 export default {
@@ -9,4 +11,9 @@ export default {
   methods: {}
 };
 </script>
+<style>
+#footer{
+  
+}
+</style>
 
