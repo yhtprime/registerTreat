@@ -3,9 +3,11 @@ import Router from 'vue-router'
 import Home from '@/components/common/Home';
 import header from '@/components/common/header';
 import footer from '@/components/common/footer';
+import error from '@/components/404.vue';
 Vue.use(Router)
 export default new Router({
-  routes: [
+
+  routes: [    
     {
       path: '/',
       name: 'index',
@@ -24,10 +26,10 @@ export default new Router({
       component: footer,
       children:[]
     },
-    // {
-    //   path:'*',
-    //   component: error
-    // }
+    {
+      path:'*',
+      component: error
+    }
   ]
 })
 

@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;   
+    list-style: none;
+    border: none;
+    vertical-align: middle;
+    text-decoration: none;
+}
+body {   
+    max-width: 1200px;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+html{
+    font-size : 8vw;
+}
