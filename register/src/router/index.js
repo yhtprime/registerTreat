@@ -23,7 +23,11 @@ export default new Router({
       name: 'footer',
       component: footer,
       children:[]
-    }
+    },
+    // {
+    //   path:'*',
+    //   component: error
+    // }
   ]
 })
 
