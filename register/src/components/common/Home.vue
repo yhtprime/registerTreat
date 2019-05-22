@@ -1,9 +1,8 @@
 <template>
     <div id="home">
         <v-header></v-header>
-        <div class="headerreplace"></div>
-        <h1>这是首页1</h1>
-        <router-view></router-view>
+        <div class="headerreplace"></div>        
+        <router-view/>
         <v-footer></v-footer>
     </div>    
 </template>
@@ -20,7 +19,10 @@ export default {
     components:{
         vFooter,
         vHeader
-    }
+    },
+    mounted() {
+       this.$router.push({path:'/register'});
+    },
 }
 </script>
 <style>

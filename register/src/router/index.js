@@ -4,6 +4,7 @@ import Home from '@/components/common/Home';
 import header from '@/components/common/header';
 import footer from '@/components/common/footer';
 import error from '@/components/404.vue';
+import register from '@/components/register.vue';
 Vue.use(Router)
 export default new Router({
 
@@ -12,7 +13,14 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Home,
-      children:[]
+      children:[
+        {
+          path: '/register',
+          name: 'register',
+          component: register,
+          children:[]
+        }
+      ]
     },
     {
       path: '/header',
