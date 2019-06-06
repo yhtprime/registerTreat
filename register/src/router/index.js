@@ -5,6 +5,9 @@ import header from '@/components/common/header';
 import footer from '@/components/common/footer';
 import error from '@/components/404.vue';
 import register from '@/components/register.vue';
+import index from '@/components/index.vue';
+import chat from '@/components/chat.vue';
+import quan from '@/components/quan.vue';
 Vue.use(Router)
 export default new Router({
 
@@ -15,11 +18,30 @@ export default new Router({
       component: Home,
       children:[
         {
+          path: '/index',
+          name: 'index',
+          component: index,
+          children:[]
+        },
+        {
           path: '/register',
           name: 'register',
           component: register,
           children:[]
-        }
+        },
+        {
+          path: '/chat',
+          name: 'chat',
+          component: chat,
+          children:[]
+        },
+        {
+          path: '/quan',
+          name: 'quan',
+          component: quan,
+          children:[]
+        },
+        
       ]
     },
     {

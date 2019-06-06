@@ -24,12 +24,14 @@ export default {
     color: #4f9796;
     position: fixed;
     top: 0;    
+    z-index: 1000;
+    background: white;
   }
   
   #header img{
     width: 30px;
     position: absolute;
-    right: 15px;
+    right: 15px;    
   }
 
 

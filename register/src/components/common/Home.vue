@@ -28,9 +28,10 @@ export default {
 <style>
 #home{    
     height: 100%;
+    margin-bottom: 1.8rem;
 }
 .headerreplace{
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.7rem;
 }
 </style>
 

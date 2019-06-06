@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 Vue.use(animate);
 Vue.use(Mint);
 Vue.use(ElementUI);
-Vue.use(axios)
+Vue.prototype.$axios = axios;
 Vue.use(VueQuillEditor)
 /* eslint-disable no-new */
 new Vue({

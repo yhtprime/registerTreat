@@ -17,7 +17,7 @@
         </mt-tab-item>
         <mt-tab-item id="3">
           <img slot="icon" src="/static/img/灯泡.png">
-          知识
+          聊天
         </mt-tab-item>
         <mt-tab-item id="4">
           <img slot="icon" src="/static/img/医疗.png">
@@ -33,16 +33,33 @@ export default {
       selected:"4"
     };
   },
-  methods: {}
+  methods: {    
+  },
+  watch: {
+    selected(n,o){
+        if(n==1)
+          this.$router.push('/index');
+        else if(n==2)
+          this.$router.push('/quan');
+        else if(n==3)
+          this.$router.push('/chat');
+        else
+          this.$router.push('/register');
+    }
+  },
 };
 </script>
 <style>
-/* #footer{
-  height: 2.2rem;    
+#footer{
+  height: 1.8rem;    
   width: 100%;  
-  position: absolute;
-  bottom: 10px;
-} */
+  position: fixed; 
+  bottom: 0;   
+}
+.mint-tabbar{
+  position: fixed !important;
+  bottom: 0;
+}
 /* #footer ul{
   width: 100%;
   height: 100%;

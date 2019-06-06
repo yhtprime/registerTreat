@@ -1,0 +1,115 @@
+.register .content{
+    width: 90% ;
+    margin-left: 5%;    
+    margin-right: 5%;
+}
+.register .content p{
+    text-align: center;
+    font-weight: 400;
+    font-size: .7rem;
+}
+.register .mtop{
+    margin-top: 30px;
+}
+.grayb{
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;        
+    border-radius: 20px;        
+    margin: .3rem 0% 0px 0%;
+    background: #f2f2f2;
+}
+.grayb .text{
+    background: white;        
+    width: 100%;              
+    border-radius:0 0 20px 20px;      
+    height: auto;
+}
+.grayb .text p{
+    font-size: .5rem;
+    padding-top: .5rem;
+    text-align: left;
+    color: #6c6c6c;
+    line-height: .65rem;
+}
+.tutut{
+    width: 100%;
+    margin-top: .7rem;
+}
+.tutut img{
+    width: 100%;
+}
+.hospital{
+    width: 100%;
+}
+.hospital .item{
+    width: 100%;
+    height: auto;
+    margin-top: .5rem;
+    display: flex;
+}
+.hospital .item .left{
+    width: 50%;        
+}
+.hospital .item .left img{
+    width:100%;
+}
+.hospital .item .right{
+    width: 50%;
+    padding-left: 10px;
+    display: inline-block;
+}
+.hospital .item .right span{
+    color: #44dfd6;  
+    font-size: .6rem;      
+}
+.hospital .item .right a:hover{
+    color: #44dfd6;
+}
+.hospital .item .right a{
+    font-size: .5rem;
+    text-align: center;
+}
+.hospital .item .right p{
+    font-size: .4rem;
+    text-align: left;                
+}
+.line3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.y2{
+    width: 100%;
+    height: auto;        
+}
+.y2 img{
+    width: 100%;
+}
+.y2text{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: .4rem;
+}
+.biao{
+    width: 100%;  
+    height: auto;  
+}
+.biao img{
+    width: 80%;
+    margin-left: 10%;
+}
+.yidi{
+    width: 100%;
+}
+.yidi img{
+    width: 100%;
+    height: auto;
+}
+.y2text button{
+    width:100%;
+    margin-top: .3rem;
+}

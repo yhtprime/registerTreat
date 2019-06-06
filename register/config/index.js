@@ -9,9 +9,30 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {},
-    
+    assetsPublicPath: '/',    
+    proxyTable: {
+    	// "/api":{
+      //       target: 'http://api.komavideo.com/news/list',
+      //       changeOrigin: true,
+      //       pathRewrite: {
+      //           '^/api': '/'
+      //       }                  
+      //   },
+        "/yht":{
+          target: 'https://dryht.cn/tpwechat/public/index.php',
+          changeOrigin: true,
+          pathRewrite: {
+              '^/yht': '/'
+          }                  
+      },
+      "/api":{
+        target: 'http://openapi.tuling123.com/openapi/',
+        changeOrigin: true,
+        pathRewrite:{
+          '^/api':''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
