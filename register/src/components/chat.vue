@@ -77,11 +77,10 @@ export default {
                "Access-Control-Allow-Headers": "X-Requested-With,Content-Type",
                "Access-Control-Allow-Methods":"PUT,POST,GET,DELETE,OPTIONS",               
             }
-        }).then(res=>{
-            console.log(res)
+        }).then(res=>{            
               this.list.push(this.text);
               this.list.push(res.data.results[0].values.text);
-              console.log(res.data.results[0].values.text);              
+              this.text="";              
           })
             
         }

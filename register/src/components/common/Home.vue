@@ -21,7 +21,7 @@ export default {
         vHeader
     },
     mounted() {
-       this.$router.push({path:'/register'});
+       this.$router.push({path:'/index'});
     },
 }
 </script>

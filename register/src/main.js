@@ -11,6 +11,8 @@ import animate from 'animate.css';
 import {WOW} from 'wowjs';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
+import qs from 'qs';
+Vue.prototype.$qs = qs;
 new WOW({live: false}).init();
 Vue.config.productionTip = false
 Vue.use(animate);

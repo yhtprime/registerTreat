@@ -1,0 +1,104 @@
+.bodytext {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0.3rem;
+  }
+  .label {
+    width: 100%;
+    height: auto;
+    color: #999999;
+  }
+  .label p {
+    float: left;
+  }
+  .label .img {
+    float: right;
+  }
+  .label img {
+    width: 0.6rem;
+    height: 0.5rem;
+    display: inline;
+  }
+  .text {
+    width: 100%;
+    margin: 0.6rem 0% 0px 0%;
+    font-size: 0.5rem;
+    color: #666666;
+    text-indent: 2em;
+    line-height: 1rem;
+  }
+  .submit {
+    margin-top: 0.4rem;
+    width: 100%;
+    height: auto;
+  }
+  .submit textarea {
+    border: 1px solid #999999;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+  }
+  .submit button {
+    margin-top: 0.3rem;
+    width: 100%;
+  }
+  .card {
+    border: 1px solid #f6f6f6;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .card .photo {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .card .photo img {
+    width: 15%;
+    height: 50px;
+  }
+  .card .photo div {
+    width: 70%;
+    height: 30%;
+    display: inline-block;
+  }
+  .card .photo .username {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.5rem;
+    color: #999999;
+    line-height: 0.8rem;
+  }
+  .card .cardtitle {
+    color: #4c9696;
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+    padding-top: 0.3rem;
+  }
+  .card .cardtext {
+    color: #666666;
+    margin-top: 0.3rem;
+    font-size: 0.45rem;
+    line-height: 0.7rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  }
+  .cardbottom {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+  .cardbottom .left {
+    float: left;
+  }
+  .cardbottom .right {
+    float: right;
+    padding-right: 1rem;
+  }
+  .cardbottom .right img {
+    width: 0.4rem;
+    height: auto;
+  }

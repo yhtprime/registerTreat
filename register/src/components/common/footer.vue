@@ -30,7 +30,7 @@
 export default {
   data() {
     return {
-      selected:"4"
+      selected:"1"
     };
   },
   methods: {    
@@ -60,22 +60,6 @@ export default {
   position: fixed !important;
   bottom: 0;
 }
-/* #footer ul{
-  width: 100%;
-  height: 100%;
-}
-#footer li{
-  font-size: .6rem;
-  width: 25%;
-  text-align: center;
-  float: left;
-  height: 100%;
-}
-#footer li img{
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-bottom: 2px;
-} */
 
 </style>
 

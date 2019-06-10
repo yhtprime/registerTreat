@@ -18,11 +18,11 @@ module.exports = {
       //           '^/api': '/'
       //       }                  
       //   },
-        "/yht":{
-          target: 'https://dryht.cn/tpwechat/public/index.php',
+      "/yht":{
+          target: 'http://dryht.cn/tpregister/public/index.php',
           changeOrigin: true,
           pathRewrite: {
-              '^/yht': '/'
+              '^/yht': ''
           }                  
       },
       "/api":{
@@ -31,7 +31,7 @@ module.exports = {
         pathRewrite:{
           '^/api':''
         }
-      }
+      },
     },
 
     // Various Dev Server settings

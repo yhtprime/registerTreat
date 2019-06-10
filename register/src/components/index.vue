@@ -20,42 +20,41 @@
                 <span>病友圈子</span>
                 <span class="small">非小细胞|小细胞</span>
             </div>
-            <div class="card">
+            <div v-for="(item) in artlist" :key="item.aid" @click="skipa(item.aid)" class="card">
                 <div class="photo"><img src="/static/img/uphoto.png">
-                    <div><p class="username">是你是我</p></div>
-                    <div><p>肺腺癌</p></div>
+                    <div><p class="username">{{item.uname}}</p>                    
+                    <p>{{item.sname}}</p></div>
                 </div>
                 <div class="cardtitle">
-                    国产特罗凯30片一盒的价格，印度特罗凯多少钱一盒 
+                    {{item.aname}} 
                 </div>
                 <div class="cardtext">
-                    文|印信国际医疗特罗凯又称厄洛替尼。是由上海罗氏制药有限公司生产的一种治疗非小细胞肺癌的第一代EGFR抑制剂，也是一种疗效非常好的靶向药物。在治疗非小细胞肺癌时不会产生明显的副作用，在目前靶向药治疗对肺癌患者是最有效的一种方式。因此特罗凯(厄洛替尼)获得了很多肺癌患者的肯定。
+                    {{item.aintro}} 
                     <div class="cardbottom">
                     <div class="left">
-                        <span>发布于</span>
+                        <span>发布于{{item.atime}}</span>
                     </div>
                     <div class="right">
                         <img src="/static/img/eye.png">
-                        <span>11</span>
+                        <span>{{item.awatch}}</span>
                     </div>
                     </div>
                 </div>
-                
             </div>
             <div class="stitle">
                 <span>前沿咨询</span>                
             </div>
-            <div class="consult">
+            <div v-for="(item,index) in newlist" :key="index" @click="skipn(item.nid)" class="consult">
                 <div class="citem">
                     <div class="item_pic"><img src="/static/img/item1.jpg"></div>
                     <div class="item_text">
-                        <div class="text"><p> 曙光乍现！新广谱抗癌药临床试验火热招募中！（涵盖全癌种）</p></div>
+                        <div class="text"><p>{{item.name}}</p></div>
                         <div class="left">
-                        <span>发布于</span>
+                        <span>发布于{{item.ndate}}</span>
                         </div>
                         <div class="right">
                             <img src="/static/img/eye.png">
-                            <span>11</span>
+                            <span>{{item.nwatch}}</span>
                         </div>                      
                     </div>                
                 </div>
@@ -67,152 +66,49 @@
 <script>
 export default {
     data(){
-        return {            
+        return { 
+            artlist:[],
+            newlist:[]           
         };
     },
     methods:{
-    }
+        skipa(aid){            
+            this.$router.push({ name:'msg',   //把name改成path也行 /demo1  !
+                                params:{aid:aid}});
+        },
+        skipb(aid){
+            // this.$router.push({ name:'msg',   //把name改成path也行 /demo1  !
+            //                     params:{nid:aid}});
+        }
+    },
+    mounted() {
+        this.$axios.get('http://www.dryht.cn/tpregister/public/',
+        {},  
+        {
+            headers: {
+              'Content-Type':'x-www-form-urlencoded',
+               "Access-Control-Allow-Origin":"*" ,
+               "Access-Control-Allow-Headers": "X-Requested-With,Content-Type",
+               "Access-Control-Allow-Methods":"PUT,POST,GET,DELETE,OPTIONS",               
+            }
+        }).then(res=>{                            
+                this.artlist = res.data;            
+          })            
+        this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/index1',
+        {},  
+        {
+            headers: {
+              'Content-Type':'x-www-form-urlencoded',
+               "Access-Control-Allow-Origin":"*" ,
+               "Access-Control-Allow-Headers": "X-Requested-With,Content-Type",
+               "Access-Control-Allow-Methods":"PUT,POST,GET,DELETE,OPTIONS",               
+            }
+        }).then(res=>{                            
+                this.newlist = res.data;                
+          })            
+    },
 }
 </script>
 <style scoped>
-    .swi{
-        width: 100%;
-        height: 5rem;
-    }
-    .index{
-        width: 100%;        
-    }
-    .index .textbody{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        overflow: hidden;
-        position: relative;
-    }
-   .top4{
-       width: 100%;
-       height: auto;       
-   }
-   .top4 div{
-        width: 25%;
-        height: auto;
-        float: left;
-   }
-   .top4 div img{
-       width: 70%;
-       margin-left: 15%;
-   }
-   .top4 div p {
-       text-align: center;
-       font-size: .6rem;
-       color: gray;
-   }
-   .stitle{
-       font-size: .8rem;       
-       margin-top: .6rem;
-       line-height: .8rem;
-   }
-   .stitle .small{
-       font-size: .6rem;
-       line-height: .8rem;
-       position: absolute;
-       right: 0;
-       color: gray;
-   }
-   .card{
-       border: 1px solid #f6f6f6;
-       width: 100%;
-       height: auto;       
-   }
-   .card .photo{
-       width: 100%;
-       height: auto;
-   }
-   .card .photo img{
-       width: 15%;
-   }
-   .card .photo div{
-       height: 30%;
-       display: inline-block;
-   }
-   .card .cardtitle{
-       color: #4c9696;
-       font-size: .5rem;
-       line-height: .5rem;
-       padding-top: .3rem;
-   }
-   .card .cardtext{
-       color: #666666;
-       margin-top: .3rem;
-       font-size: .45rem;
-       line-height: .7rem;
-       display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
-        overflow: hidden;
-   }
-   .cardbottom{
-       margin-top: .3rem;
-       margin-bottom: .2rem;
-   }
-   .cardbottom .left{
-       float: left;
-   }
-   .cardbottom .right{
-       float: right;
-       padding-right: 1rem;
-   }
-   .cardbottom .right img{
-       width: .4rem;
-       height: auto;
-   }
-   .consult{
-       width: 100%;
-       height: auto;
-       margin-top: .2rem;
-   }
-   .consult .citem{       
-       width: 100%;
-       height: auto;
-       display: flex;
-       flex-flow: row nowrap;
-       position: relative;
-   }
-   .consult .citem .item_pic{
-       width: 30%;
-       height: auto;       
-   }
-   .consult .citem .item_pic img{
-       width: 100%;
-       height: auto;
-   }
-   .consult .citem .item_text{
-       padding-left: .2rem;
-       width: 70%;
-       height: auto;
-       position: relative;
-   }
-   .consult .citem .item_text .left{
-       position: absolute;
-       left: .2rem;
-       bottom: 0;
-   }
-   .consult .citem .item_text .right{
-       position: absolute;
-       right: 1rem;
-       bottom: 0;
-   }
-   .consult .citem .item_text .text{
-       font-size: .45rem;
-       line-height: .5rem;
-       display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-   }
-   .consult .citem .item_text .right img{
-       width: .4rem;
-       height: auto;
-   }
-     
+@import '../../static/css/index.css'; 
 </style>

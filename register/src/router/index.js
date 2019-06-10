@@ -8,6 +8,8 @@ import register from '@/components/register.vue';
 import index from '@/components/index.vue';
 import chat from '@/components/chat.vue';
 import quan from '@/components/quan.vue';
+import msg from '@/components/msg.vue';
+import yuyue from '@/components/yuyue.vue';
 Vue.use(Router)
 export default new Router({
 
@@ -40,8 +42,7 @@ export default new Router({
           name: 'quan',
           component: quan,
           children:[]
-        },
-        
+        },       
       ]
     },
     {
@@ -59,6 +60,18 @@ export default new Router({
     {
       path:'*',
       component: error
+    },
+    {
+      path:'/msg',
+      name:'msg',
+      component: msg,
+      children:[]
+    },
+    {
+      path:'/yuyue',
+      name:'yuyue',
+      component: yuyue,
+      children:[]
     }
   ]
 })

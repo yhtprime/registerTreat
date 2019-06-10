@@ -6,8 +6,7 @@
         <mt-tab-item id="2">远程咨询</mt-tab-item>
         </mt-navbar>
         <div class="white"></div>
-        <div class="white"></div>
-        <!-- tab-container -->
+        <div class="white"></div>        
         <mt-tab-container v-model="selected">
         <mt-tab-container-item id="1">
             <div><img style="width:100%; height: 4.5rem;" src="/static/img/4h.jpg"></div>
@@ -47,7 +46,7 @@
             <div class="y2text">
                 <div class="biao"><img src="/static/img/biao_t1.jpg"></div>
                 <div class="yidi"><img src="/static/img/yidi.jpg"></div>
-                <mt-button type="primary">联系我们</mt-button>
+                <mt-button @click="yuyue" type="primary">联系我们</mt-button>
             </div>
         </mt-tab-container-item>        
         </mt-tab-container>    
@@ -61,7 +60,9 @@ export default {
         };
     },    
     methods: {
-        
+        yuyue(){
+            this.$router.push('yuyue');
+        }
     },
     
 }
