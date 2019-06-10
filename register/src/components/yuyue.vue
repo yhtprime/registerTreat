@@ -1,5 +1,6 @@
 <template>
     <div class="app">
+      <mt-button @click="back" icon="back">back</mt-button>
         <h1>医疗预约</h1>
         <mt-field label="姓名" placeholder="请输入姓名" v-model="username"></mt-field>
 <mt-radio
@@ -56,6 +57,9 @@ export default {
         }
     },
     methods: {
+      back() {
+      this.$router.go(-1);
+      },
      handleRemove(file, fileList) {
         console.log(file, fileList);
       },

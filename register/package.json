@@ -2,7 +2,7 @@
   "name": "register",
   "version": "1.0.0",
   "description": "this is a Treatment register project",
-  "author": "814850963@qq.com",
+  "author": "rcq@qq.com",
   "private": true,
   "scripts": {
     "swuxub": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -17,6 +17,7 @@
     "http-proxy-middleware": "^0.19.1",
     "mint-ui": "^2.2.13",
     "qs": "^6.7.0",
+    "vant": "^1.6.22",
     "vue": "^2.6.10",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.1",

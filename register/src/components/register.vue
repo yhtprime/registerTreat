@@ -36,6 +36,14 @@
                             <p class="line3">MD安德森癌症中心是全美少数几个拥有联邦政府资助的肺癌SPORE研究项目的中心之一。作为享誉世界的癌症研究中心之一，MD安德森在肺癌诊断和治疗的新方法研究领域处于领先地位。每一位肺癌患者都会得益于最先进的研究，研究成果将被尽快转化为临床治疗。</p>
                         </div>
                     </div>
+                    <div v-for="(v,index) in list" :key="index" class="item">
+                        <div class="left"><img src="/static/img/h1.jpg"></div>
+                        <div class="right">
+                            <a>{{v.hname}}</a>
+                            <p>癌症专科排名:<span>{{v.rank}}</span></p>
+                            <p class="line3">{{v.hintro}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </mt-tab-container-item>
@@ -56,13 +64,33 @@
 export default {
     data(){
         return {
-            selected: "1"
+            selected: "1",
+            list:[]
         };
     },    
     methods: {
         yuyue(){
             this.$router.push('yuyue');
         }
+    },
+    mounted() {
+        this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/gethos').then(res=>{
+                console.log(res.data);     
+                for(let i =0 ; i<=res.data.length-1;i++)
+                {
+                    for(let j=0 ; j<res.data.length-1-i;j++)
+                    {
+                        if(res.data[j].rank>res.data[j+1].rank)
+                        {                            
+                            var temp = res.data[j];
+                            res.data[j] = res.data[j + 1];
+                            res.data[j + 1] = temp;
+                        }
+                    }
+                }                           
+                this.list = res.data;
+                 
+        })
     },
     
 }

@@ -9,13 +9,16 @@ import index from '@/components/index.vue';
 import chat from '@/components/chat.vue';
 import quan from '@/components/quan.vue';
 import msg from '@/components/msg.vue';
+import msg1 from '@/components/msg1.vue';
 import yuyue from '@/components/yuyue.vue';
+import login from '@/components/login.vue';
+import reg from '@/components/reg.vue';
 Vue.use(Router)
 export default new Router({
 
   routes: [    
     {
-      path: '/',
+      path: '/index',
       name: 'index',
       component: Home,
       children:[
@@ -68,11 +71,29 @@ export default new Router({
       children:[]
     },
     {
+      path:'/msg1',
+      name:'msg1',
+      component: msg1,
+      children:[]
+    },
+    {
       path:'/yuyue',
       name:'yuyue',
       component: yuyue,
       children:[]
-    }
+    },
+    {
+      path:'/',
+      name:'login',
+      component: login,
+      children:[]
+    },
+    {
+      path:'/reg',
+      name:'reg',
+      component: reg,
+      children:[]
+    },
   ]
 })
 

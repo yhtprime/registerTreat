@@ -47,12 +47,15 @@ export default {
     get() {
       let params={aid:this.$route.params.aid};      
       this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/singleart',{params}).then(res=>{          
-          this.info = res.data;
+          this.info = res.data;          
           this.info1 = this.info[0];
+          this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/comments',{params}).then(res=>{          
+          this.info = res.data;             
       })
+      })      
     },
     submit() {
-      let params={intro:this.introduction,aid:this.$route.params.aid};      
+      let params={intro:this.introduction,aid:this.$route.params.aid,uid:sessionStorage.getItem('uid')};      
       this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/comsub',{params}).then(res=>{          
           if(1==res.data){
               this.$toast({
@@ -71,12 +74,8 @@ export default {
     },
   },
    mounted() {
-      let params={aid:this.$route.params.aid};      
-      this.$axios.get('http://www.dryht.cn/tpregister/public/index/index/singleart',{params}).then(res=>{          
-          this.info = res.data;
-          this.info1 = this.info[0];        
-      })
-    },
+      this.get();
+   }
 };
 </script>
 <style scoped>

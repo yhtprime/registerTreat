@@ -44,7 +44,7 @@
             <div class="stitle">
                 <span>前沿咨询</span>                
             </div>
-            <div v-for="(item,index) in newlist" :key="index" @click="skipn(item.nid)" class="consult">
+            <div v-for="(item,index) in newlist" :key="index" @click="skipb(item.nid)" class="consult">
                 <div class="citem">
                     <div class="item_pic"><img src="/static/img/item1.jpg"></div>
                     <div class="item_text">
@@ -76,9 +76,9 @@ export default {
             this.$router.push({ name:'msg',   //把name改成path也行 /demo1  !
                                 params:{aid:aid}});
         },
-        skipb(aid){
-            // this.$router.push({ name:'msg',   //把name改成path也行 /demo1  !
-            //                     params:{nid:aid}});
+        skipb(nid){
+            this.$router.push({ name:'msg1',   //把name改成path也行 /demo1  !
+                                params:{nid:nid}});
         }
     },
     mounted() {

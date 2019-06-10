@@ -163,7 +163,7 @@ export default {
         background: #f6f6f6;
     } 
     .chatsubmit input{
-        width: 70%;
+        width: 68%;
         margin-left: 5%;
         margin-right: 5%;
         height: 5vh;

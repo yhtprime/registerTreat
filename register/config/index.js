@@ -19,7 +19,7 @@ module.exports = {
       //       }                  
       //   },
       "/yht":{
-          target: 'http://dryht.cn/tpregister/public/index.php',
+          target: 'http://dryht.cn/tpregister/public/',
           changeOrigin: true,
           pathRewrite: {
               '^/yht': ''
@@ -64,8 +64,8 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsSubDirectory: './static',
+    assetsPublicPath: './',
 
     /**
      * Source Maps

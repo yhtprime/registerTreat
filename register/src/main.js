@@ -12,6 +12,9 @@ import {WOW} from 'wowjs';
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
 import qs from 'qs';
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 Vue.prototype.$qs = qs;
 new WOW({live: false}).init();
 Vue.config.productionTip = false
