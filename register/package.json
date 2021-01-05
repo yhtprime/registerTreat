@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "element": "^0.1.4",
     "element-ui": "^2.8.2",
     "http-proxy-middleware": "^0.19.1",
