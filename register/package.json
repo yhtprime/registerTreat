@@ -16,7 +16,7 @@
     "element-ui": "^2.8.2",
     "http-proxy-middleware": "^0.19.1",
     "mint-ui": "^2.2.13",
-    "qs": "^6.7.0",
+    "qs": "^6.7.3",
     "vant": "^1.6.22",
     "vue": "^2.6.10",
     "vue-quill-editor": "^3.0.6",
